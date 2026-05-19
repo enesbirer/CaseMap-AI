@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: 9 10 12;
+  --foreground: 236 238 242;
+
+  --muted: 20 22 26;
+  --muted-foreground: 163 167 175;
+
+  --card: 14 16 20;
+  --card-foreground: 236 238 242;
+
+  --border: 30 33 40;
+  --ring: 116 148 255;
+
+  --primary: 116 148 255;
+  --primary-foreground: 7 9 12;
+
+  --danger: 255 82 82;
+  --warning: 255 184 77;
+  --success: 67 214 132;
+
+  --radius: 16px;
+}
+
+@theme inline {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+  --color-border: rgb(var(--border));
+  --color-ring: rgb(var(--ring));
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-danger: rgb(var(--danger));
+  --color-warning: rgb(var(--warning));
+  --color-success: rgb(var(--success));
+  --radius: var(--radius);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1100px 700px at 10% 10%, rgba(116, 148, 255, 0.16), transparent 55%),
+    radial-gradient(900px 600px at 90% 20%, rgba(67, 214, 132, 0.10), transparent 50%),
+    radial-gradient(900px 600px at 50% 110%, rgba(255, 184, 77, 0.08), transparent 55%),
+    rgb(var(--background));
+}
+
+.glass {
+  background: rgba(18, 20, 26, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+}
+
+.grid-dots {
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+
